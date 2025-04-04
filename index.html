@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Telegram Ranking Bot</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .bot-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #007aff, #00c6ff);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 122, 255, 0.3);
+}
+
+.bot-button:hover {
+  background: linear-gradient(to right, #005bbb, #0096c7);
+}
+
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #ffffffcc;
+      border-radius: 12px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      color: #222;
+    }
+
+    h2 {
+      margin-top: 2em;
+      color: #1a1a1a;
+    }
+
+    h3 {
+      margin-top: 1.5em;
+      color: #333;
+    }
+
+    p, ul, li {
+      margin-bottom: 1em;
+    }
+
+    ul {
+      padding-left: 1.2em;
+    }
+
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    pre {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 1em 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f4f6fb;
+    }
+
+    tr:hover {
+      background-color: #f9f9f9;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #005a9e;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 Telegram Ranking Bot</h1>
+    <p>A feature-rich Telegram bot that tracks user activity in groups, ranks users based on their engagement, and provides insightful group statistics. This bot enhances group interactions with gamification, XP leveling, leaderboards, and moderation tools.</p>
+    
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="https://t.me/Lionxloverbot" target="_blank" class="bot-button">🚀 Open RankersBot</a>
+      </div>
+      
+    <hr>
+
+    <h2>🚀 Features</h2>
+
+    <h3>📊 User Activity Tracking</h3>
+    <ul>
+      <li>Tracks messages, stickers, photos, and media.</li>
+      <li>Records:
+        <ul>
+          <li>Total messages</li>
+          <li>XP (Experience Points)</li>
+          <li>Level</li>
+          <li>Daily streak</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>🏆 Ranking System</h3>
+    <ul>
+      <li>Leaderboards based on engagement.</li>
+      <li>Filters supported:
+        <ul>
+          <li>📅 Today</li>
+          <li>📈 This Week</li>
+          <li>🏆 Forever</li>
+          <li>💬 Current Chat</li>
+          <li>🌐 Global Stats (coming soon)</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>📈 Group Statistics</h3>
+    <ul>
+      <li>Total messages</li>
+      <li>Number of users</li>
+      <li>Banned users</li>
+      <li>Active users today</li>
+      <li>Most active hours</li>
+    </ul>
+
+    <h3>📜 User History</h3>
+    <ul>
+      <li>Tracks:
+        <ul>
+          <li>Message stats over time</li>
+          <li>Name and username changes</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>🛡️ Moderation Tools</h3>
+    <ul>
+      <li>Detects and logs spam, links, and bad words.</li>
+      <li>Auto-warns, mutes, or bans based on settings.</li>
+    </ul>
+
+    <h3>🎮 XP & Leveling System</h3>
+    <ul>
+      <li>Custom XP per action:</li>
+      <ul>
+        <li>Messages: +5 XP</li>
+        <li>Stickers: +2 XP</li>
+        <li>Photos: +3 XP</li>
+        <li>Voice: +4 XP</li>
+        <li>Videos: +6 XP</li>
+      </ul>
+      <li>Leveling thresholds configurable.</li>
+    </ul>
+
+    <h3>🔘 Interactive Inline Buttons</h3>
+    <ul>
+      <li>📜 Commands</li>
+      <li>📊 My Stats</li>
+      <li>🔄 Refresh</li>
+      <li>🔝 Filter Rankings</li>
+    </ul>
+
+    <hr>
+
+    <h2>🧾 Commands</h2>
+    <table>
+      <tr><th>Command</th><th>Description</th></tr>
+      <tr><td><code>/start</code></td><td>Starts the bot and displays intro + menu</td></tr>
+      <tr><td><code>/help</code></td><td>Shows available commands</td></tr>
+      <tr><td><code>/ranking</code></td><td>Displays top 10 most active users with filters</td></tr>
+      <tr><td><code>/mytop</code></td><td>View your XP, level, and activity</td></tr>
+      <tr><td><code>/groupstats</code></td><td>View detailed group statistics</td></tr>
+      <tr><td><code>/history</code></td><td>Shows activity history of a user</td></tr>
+      <tr><td><code>/changes</code></td><td>Displays username and name change history</td></tr>
+    </table>
+
+    <hr>
+
+    <h2>💾 Data Storage</h2>
+    <p>The bot uses <code>data.json</code> to persist data like XP, message counts, and group stats.</p>
+    <pre><code>{
+  "groups": {
+    "-1001234567890": {
+      "group_name": "My Group",
+      "stats": {
+        "total_messages": 10000,
+        "active_users_today": 20
+      },
+      "users": {
+        "123456789": {
+          "full_name": "John Doe",
+          "username": "johndoe",
+          "xp": 300,
+          "level": 3,
+          "streak_days": 2
+        }
+      }
+    }
+  }
+}</code></pre>
+
+    <hr>
+
+    <h2>🏗 XP & Level Logic</h2>
+    <table>
+      <tr><th>Activity</th><th>XP</th></tr>
+      <tr><td>Message</td><td>+5</td></tr>
+      <tr><td>Sticker</td><td>+2</td></tr>
+      <tr><td>Photo</td><td>+3</td></tr>
+      <tr><td>Voice</td><td>+4</td></tr>
+      <tr><td>Video</td><td>+6</td></tr>
+    </table>
+
+    <p><strong>Level thresholds:</strong></p>
+    <ul>
+      <li>Level 2: 100 XP</li>
+      <li>Level 3: 200 XP</li>
+      <li>... (configurable)</li>
+    </ul>
+
+    <hr>
+
+    <h2>🧠 Planned Features</h2>
+    <ul>
+      <li>🌐 Global leaderboard (cross-group)</li>
+      <li>🏅 Achievements / badge system</li>
+      <li>⚙️ Admin panel for config (XP rates, filters)</li>
+      <li>📊 Detailed charts per user</li>
+    </ul>
+
+    <hr>
+
+    <h2>👤 Credits</h2>
+    <p>Developed by <a href="https://t.me/lionxlover" target="_blank">Lion</a></p>
+    <p>Want to collaborate? DM me on Telegram or fork the repo and build with me! 🔥</p>
+  </div>
+</body>
+</html>
